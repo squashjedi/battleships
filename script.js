@@ -151,8 +151,6 @@ grid.addEventListener('click', e => {
       document.querySelector('#start-game button').classList.remove('hide')
     }
   }
-
-
 })
 
 grid.addEventListener('mouseover', e => {
@@ -294,9 +292,9 @@ function battleRound(e) {
             textAlert('... and has missed!')
           }
           isUserTurn = true
-        }, 0)
+        }, 2000)
       }
-    }, 0)
+    }, 2000)
   }
 }
 
