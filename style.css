@@ -1,0 +1,249 @@
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600&display=swap');
+
+body {
+  font-family: Titillium Web, Arial, Helvetica, sans-serif;
+  height: 100vh;
+}
+
+h1 {
+  margin: 40px 0;
+  font-size: 3em;
+  text-align: center;
+}
+
+.your-ships {
+  padding: 20px;
+}
+
+h2 {
+  margin-bottom: 8px;
+}
+
+.game-alert {
+  display: flex;
+  text-align: center;
+  line-height: 1.2em;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+}
+
+.wrapper {
+  margin: 60px auto 0 auto;
+  display: grid;
+  width: 760px;
+  height: 760px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+#select-ships {
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  border: 1px solid lightgray;
+  cursor: pointer;
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid lightgray;
+  cursor: pointer; */
+}
+
+.vessel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* flex-direction: row-reverse; */
+}
+
+.vessel > div:first-child {
+  font-weight: bold;
+}
+
+.ship {
+  display: flex;
+  margin: 3px 0;
+  cursor: pointer;
+}
+
+.ship > div {
+  font-size: 0.8em;
+  background: rgb(179, 179, 179);
+  height: 20px;
+  width: 20px;
+  border: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ship > div:first-child {
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 100%;
+}
+
+.ship > div:last-child {
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+}
+
+.grid {
+  background: rgb(190, 237, 253);
+}
+
+.grid > div {
+  border: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid > div.live-ship {
+  background: rgb(179, 179, 179);
+}
+
+.grid > div.live-ship.start-horizontal {
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 100%;
+}
+
+.grid > div.live-ship.end-horizontal {
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+}
+
+.hit {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: red;
+}
+
+.miss {
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background: rgb(182, 181, 181);
+}
+
+.grid > div.live-ship.start-vertical {
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+}
+
+.grid > div.live-ship.end-vertical {
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+}
+
+.grid > div.place-ship {
+  background: lightpink;
+}
+
+.grid > div.place-ship.start-horizontal {
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 100%;
+}
+
+.grid > div.place-ship.end-horizontal {
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
+}
+
+.grid > div.place-ship.start-vertical {
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+}
+
+.grid > div.place-ship.end-vertical {
+  border-bottom-left-radius: 100%;
+  border-bottom-right-radius: 100%;
+}
+
+.grid > div.place-ship.live-ship {
+  border-radius: 0;
+}
+
+.ship[selected] > div {
+  background: rgb(149, 189, 162);
+}
+
+.ship[placed] > div {
+  background: rgb(247, 142, 142);
+}
+
+#orientation > div:first-child {
+  background: rgb(233, 232, 232);
+  border: 1px solid rgb(167, 166, 166);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+#orientation > div:last-child {
+  text-align: center;
+  margin-top: 5px;
+  font-size: 0.9em;
+  color: green;
+  font-weight: normal;
+}
+
+#orientation > div > div {
+  font-weight: bold;
+  color: green;
+}
+
+#orientation button {
+  appearance: none;
+  border: 1px solid rgb(167, 166, 166);
+  border-radius: 5px;
+  background: white;
+  font-family: Titillium Web, Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+#start-game {
+  margin-top: 33px;
+  display: flex;
+  justify-content: center;
+}
+
+#start-game button {
+  font-size: 1.1em;
+  font-weight: bold;
+  appearance: none;
+  border: 1px solid rgb(167, 166, 166);
+  border-radius: 5px;
+  padding: 5px 15px;
+  background: rgb(161, 206, 167);
+  font-family: Titillium Web, Arial, Helvetica, sans-serif;
+  cursor: pointer;
+}
+
+.hide, #orientation.hide {
+  display: none;
+}
+
+strong {
+  font-weight: bold;
+}
+
+#select-vessel {
+  display: flex;
+  justify-content: space-between;
+}
+
+#select-vessel div {
+  font-size: 0.9em;
+  color: green;
+}

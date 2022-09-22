@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script type="module" src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Battleships</title>
+</head>
+
+<body>
+  <h1>BATTLESHIPS</h1>
+  <section class="wrapper">
+    <div class="grid grid-a"></div>
+    <div class="your-ships">
+      <div id="select-vessel">
+        <h2>Your Vessels</h2>
+        <div>
+          Please Select
+        </div>
+      </div>
+      <div id="select-ships">
+        <div class="vessel">
+          <div>Carrier</div>
+          <div data-id="0" class="ship">
+            <div>C</div>
+            <div>C</div>
+            <div>C</div>
+            <div>C</div>
+            <div>C</div>
+          </div>
+        </div>
+        <div class="vessel">
+          <div>Battleship</div>
+          <div data-id="1" class="ship">
+            <div>B</div>
+            <div>B</div>
+            <div>B</div>
+            <div>B</div>
+          </div>
+        </div>
+        <div class="vessel">
+          <div>Destroyer</div>
+          <div data-id="2" class="ship">
+            <div>D</div>
+            <div>D</div>
+            <div>D</div>
+          </div>
+        </div>
+        <div class="vessel">
+          <div>Submarine</div>
+          <div data-id="3" class="ship">
+            <div>S</div>
+            <div>S</div>
+            <div>S</div>
+          </div>
+        </div>
+        <div class="vessel">
+          <div>Patrol Boat</div>
+          <div data-id="4" class="ship">
+            <div>P</div>
+            <div>P</div>
+          </div>
+        </div>
+      </div>
+      <div id="orientation" class="hide">
+        <div>
+          <div>Horizontal</div>
+          <button data-is-horizontal>Toggle Orientation</button>
+        </div>
+        <div>
+          Move cursor onto the left hand grid and click to place your vessel
+        </div>
+      </div>
+      <div id="start-game">
+        <button class="hide">Let's Play Battleships!</button>
+      </div>
+    </div>
+    <div></div>
+    <div class="grid grid-b"></div>
+  </section>
+
+  <!-- <div id="grid-setup">
+    <div id="select-ships">
+    </div>
+    <div id="orientation">
+      <div>Horizontal</div>
+      <button data-is-horizontal>Toggle Orientation</button>
+    </div>
+    <div class="grid">
+    </div>
+  </div> -->
+</body>
+
+</html>
